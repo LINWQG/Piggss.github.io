@@ -1,0 +1,15 @@
+h2{
+	font-family: 楷体;
+	text-align: center;
+	font-size: 36px;
+	color: #666;
+}
+address{
+	text-align: center;
+	color: #666;
+}
+span,p{
+	font-family: 楷体;
+	color: #666;
+	line-height: 2em;
+}
