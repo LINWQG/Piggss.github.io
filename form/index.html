@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{margin: 0;border: 0;padding: 0;}
+			input{
+				display: none;
+			}
+			label{
+				display: inline-block;
+				width: 60px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+			}
+			.contens{
+				box-sizing: border-box;
+				width: 600px;
+				height: 480px;
+				border: 1px solid #000;
+				overflow: hidden;
+				position: relative;
+			}
+			.contens *{
+				width: 600px;
+				height: 480px;
+			}
+			#con1{background: pink;}
+			#con2{background: yellow;}
+			#con3{background: yellowgreen;}
+			
+			#tab1:checked~#label1{background: pink;}
+			#tab2:checked~#label2{background: yellow;}
+			#tab3:checked~#label3{background: yellowgreen;}
+			
+			#tab1:checked~.contens #con1{
+				position: relative;
+				top: 0px;}
+				
+
+				#tab2:checked~.contens #con2
+				{position: relative;
+				top: -480px;}
+				
+				#tab3:checked~.contens #con3{
+					position: relative;
+				top: -960px;}
+		</style>
+	</head>
+	<body>
+			<div class="tabs">
+				<input type="radio"checked="checked" id="tab1" name="tab"/>
+				<input type="radio" id="tab2" name="tab"/>
+				<input type="radio"id="tab3" name="tab"/>
+				<label for="tab1" id="label1">新闻</label>
+				<label for="tab2" id="label2">通知</label>
+				<label for="tab3" id="label3">公告</label>
+			
+			<div class="contens">
+				<div id="con1" >新闻内容</div>
+				<div id="con2" >通知内容</div>
+				<div id="con3" >公告内容</div>
+			</div>
+			</div>
+	
+	</body>
+</html>
+
