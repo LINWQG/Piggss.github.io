@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>css实现垂直手风琴的效果</title>
+		<style>
+			*{margin: 0;padding: 0;}
+			.listbox{
+				width: 500px;
+				margin: 50px auto;
+			}
+			.listbox .list a{
+				display: block;
+				height: 35px;
+				background: linear-gradient(#cecece,#8f8f8f);
+				border-radius: 5px;
+				padding-left: 12px;
+				text-decoration: none;
+				color: #424242;
+				line-height: 35px;
+			}
+			.listbox .list p{
+				height: 0px;
+				overflow: auto;
+				padding-left: 10px;
+				margin: 5px 0px;
+				transition:0.5s;
+			}
+			.listbox .list{position: relative;}
+			.listbox .list span{
+				width: 0;
+				height: 0px;
+				border-left: 5px solid  transparent;
+				border-right: 5px solid  transparent;
+				border-top: 5px solid white;
+				border-bottom: 5px solid  transparent;
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			}
+			.listbox .list:target p{height: 100px;}
+			.listbox .list a:hover,.listbox .list:target a{background: linear-gradient(#6bb2ff,#2288dd);
+			color: white;}
+			.listbox .list:target span{border-top: 5px solid transparent;border-left: 5px solid #FFFFFF;
+			right: 10px;}
+		</style>
+	</head>
+	<body>
+		<div class="listbox">
+			<div class="list" id="listone">
+				<a href="#listone">Brand</a>
+				<span></span>
+				<p>ajl;fjaljfklasjflsjldsfa
+					safsafasfsafsafsafsfs
+					afsafasdfsafddafasf
+					sfasfsdafsfsafsadfasfas
+					fsa
+					fasfasfsfsaf
+					safsafsafsafasfwwdws
+					fjlajsfllasfaljflkjslfjaslkdfjlksdjfljslfjwijfwjfljflsjflsjaf
+				sklfjaljflkdsjflksajflkjsalkdjfklsdjaflsjfdkljsalfjl
+				jsajfldajsflsdjlfjaslfjlsjflksjflksajkfjsdkfjsljfsjkfjsklfjslfj
+				jflsajflsjdfklsdjfklsjfiwjrllwjgjgkasjfskajfdjajfaja</p>
+			</div>
+			<div class="list" id="listtwo">
+				<a href="#listtwo">Brand</a>
+				<span></span>
+				<p>ajl;fjaljfklasjflsjldsfa
+					safsafasfsafsafsafsfs
+					afsafasdfsafddafasf
+					sfasfsdafsfsafsadfasfas
+					fsar
+					fasfasfsfsaf
+					safsafsafsafasfwwdws
+					fjlajsfllasfaljflkjslfjaslkdfjlksdjfljslfjwijfwjfljflsjflsjaf
+				sklfjaljflkdsjflksajflkjsalkdjfklsdjaflsjfdkljsalfjl
+				jsajfldajsflsdjlfjaslfjlsjflksjflksajkfjsdkfjsljfsjkfjsklfjslfj
+				jflsajflsjdfklsdjfklsjfiwjrllwjgjgkasjfskajfdjajfaja</p>
+			</div>
+			<div class="list" id="listthree">
+				<a href="#listthree">Brand</a>
+				<span></span>
+				<p>ajl;fjaljfklasjflsjldsfa
+					safsafasfsafsafsafsfs
+					afsafasdfsafddafasf
+					sfasfsdafsfsafsadfasfas
+					fsa
+					fasfasfsfsaf
+					safsafsafsafasfwwdws
+					fjlajsfllasfaljflkjslfjaslkdfjlksdjfljslfjwijfwjfljflsjflsjaf
+				sklfjaljflkdsjflksajflkjsalkdjfklsdjaflsjfdkljsalfjl
+				jsajfldajsflsdjlfjaslfjlsjflksjflksajkfjsdkfjsljfsjkfjsklfjslfj
+				jflsajflsjdfklsdjfklsjfiwjrllwjgjgkasjfskajfdjajfaja</p>
+			</div>
+		</div>
+	</body>
+</html>
