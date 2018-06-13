@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="a.css" style="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="bg">
+			<form action="#" method="get" autocomplete="off">
+				<h2>传智学员信息登记表</h2>
+				<p><span>用户登录名：</span><input type="text" name="user_name" value="myemail@163.com"disabled readonly</p>
+				<p><span>真实姓名：</span><input type="text" name="real_name" value="王明"disabled  readonly</p>
+				<p><span>真实年龄：</span><input type="number" name="real_lage" value="24" min="15" max="120" required/</p>
+				<p><span>出生日期：</span><input type="date" name="birthday"value="1990-10-1"required/</p>
+				<p><span>电子邮箱：</span><input type="email" name="myemail" placeholder="123456@126.com"</p>
+				<p><span>身份证号：</span><input type="text" name="card"required /</p>
+				<p><span>手机号</span><input type="tel" name="telphone"required/</p>
+                <p><span>个人主页：</span><input type="url"name="myurl"list="urllist"placeholder="http://www.itcast.cn" />
+                	   <datalist id="urllist">
+                	 <option>http://www.itcast.cn</option>
+                	<option>http://www.baidu.com</option>
+                	<option>http://www.3cschool.com</option>
+                </datalist>
+             </p>
+             <p class="lucky"><span>幸运颜色：</span><input type="color" name="color">请选择你喜欢的颜色</p>
+             <p class="btn">
+             	<input type="submit" value="提交" />
+             	<input type="reset" value="重置" />
+             </p>
+             </form>
+		</div>
+	</body>
+</html>
