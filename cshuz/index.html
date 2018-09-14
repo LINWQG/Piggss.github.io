@@ -1,0 +1,90 @@
+	<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>猜数字游戏</title>
+<style type="text/css">
+.guessNumber{
+width: 300px;
+height: 300px;
+margin: auto;
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+
+}
+.guessNumber h2{
+text-align: center;
+}
+.guessNumber .guessC{
+width: 252px;
+margin: auto;
+}
+.guessNumber #numInput{
+
+border: none;
+outline: none;
+border: 1px solid #000;
+width: 186px;
+height: 30px;
+border-radius: 20px 0 0 20px;
+text-indent: 15px;
+}
+#btnGuess{
+border: none;
+outline: none;
+border: 1px solid #000;
+width: 40px;
+height: 34px;
+border-radius: 0 20px 20px 0;
+
+background: transparent;
+position:relative;
+top:1px;
+right: 6px;
+
+	
+}
+.tip{
+	margin-left: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="guessNumber">
+<h2 class="title">猜数字游戏</h2>
+<div class="guessC">
+<input id="numInput" type="number" placeholder="0-10整数，6次机会" />
+<input id="btnGuess" type="button" value="提交" onclick="caice()"/>
+</div>
+<div class="tip">
+<div id="but">剩余次数：6</div>
+<div id="caice">猜测历史：</div>
+
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	var str='猜测历史：';
+	var sum=6;
+	var a=parseInt(Math.random()*11);
+	console.log(a);
+	function caice(){
+		sum--;
+		if (sum>=0) {
+			var number=document.getElementById('numInput');
+			if(number.value==a) {str+='<br />'+'&nbsp;&nbsp;&nbsp;&nbsp;'+'您猜对啦！！！';}
+			if(number.value>a) {str+='<br />'+'&nbsp;&nbsp;&nbsp;&nbsp;'+'您猜的数字偏大';}
+			if(number.value<a) {str+='<br />'+'&nbsp;&nbsp;&nbsp;&nbsp;'+'您猜的数字偏小';}
+			
+		} else{
+			
+		}
+		document.getElementById('but').innerHTML='剩余次数：'+sum;
+		document.getElementById('caice').innerHTML=str;
+	}
+</script>
+</html>
